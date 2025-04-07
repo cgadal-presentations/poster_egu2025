@@ -1,0 +1,80 @@
+---
+format:
+  revealjs:
+    theme: [dark, custom.scss]
+    width: 1920
+    height: 1092
+    callout-icon: false
+    slide-number: false
+    margin: 0
+---
+
+:::: {.columns}
+
+::: {.column width="20%" .sidecolumn} 
+
+
+<h2 style="margin-top:10px; margin-bottom:20px"> {{< fa book >}} - Introduction </h2>
+
+Turbulent flow over complex terrain plays a key role in many environmental and geophysical systems, such as wind energy, wave formation, and dune dynamics. 
+<!--  -->
+Compared to hills and mountains, **aeolian sand dunes**, due to their smooth and scalable shapes, **are ideal for studying wind-topography interactions**.
+<!--  -->
+While **topography feedback on wind speed** has been largely quantified an understood, much less is know **on the wind direction**, especially for **giant dunes, less studied for practical reasons**.
+<!--  -->
+While the resolution of global atmospheric models is getting more precise, their habilility to reproduce precisely near-surface wind remain to be assessed.
+
+1. Can global atmospheric models predict near-surface winds in arid areas? 
+2. Does giant dunes signficantly affect the atmospheric flow?
+
+<h2> {{< fa gears >}} - Methods </h2>
+
+ERA5-land (climate reanalysis) + local wind measurements comparison in 4 different places in the Namib desert.
+
+![](poster_files/src/figures/figure_map.svg)
+
+
+:::
+
+::: {.column width="60%" .maincolumn}
+
+::: {#mainMessage}
+**Giant dunes can disturb the wind ...**
+:::
+
+
+:::: {style="max-width: 50%; margin: 25px auto; border-bottom: 3px solid #71767a;"}
+::::
+
+::: {#mainMessage}
+**... affecting smaller-scale bedforms in the interdune !**
+:::
+
+
+::: {#posterfooter}
+**Local wind regime induced by giant linear dunes**
+
+Cyril Gadal, Pauline Delorme, Clément Narteau, Giles F.S. Wiggs, Matthew Baddock, Joanna M. Nield, and Philippe Claudin
+:::
+
+:::
+
+::: {.column width="20%" .sidecolumn} 
+
+::: {style='text-align:center' #logos}
+![](poster_files/src/logos/EGU22-sharing-is-encouraged.png){height=65px fig-align="right" #Logoimage}
+:::
+
+<h2> {{< fa lightbulb >}} - Results </h2>
+
+
+
+<h2> {{< fa square-check regular >}} - Conclusion </h2>
+
+
+<h2> {{< fa file-circle-question >}} - Discussion/Perspectives </h2>
+
+
+:::
+
+::::
