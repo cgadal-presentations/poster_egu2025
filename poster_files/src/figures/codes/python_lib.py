@@ -1,5 +1,34 @@
+import matplotlib.colors as mpcolors
 import matplotlib.patches as ptch
 import numpy as np
+
+
+def truncate_colormap(cmap, minval=0.0, maxval=1.0, n=100):
+    """Truncate a given colormap.
+
+    Parameters
+    ----------
+    cmap : matplotlib colormap.
+        Input colormap to be truncated.
+    minval : float
+        Where to start the wanted colormap, assuming that 0 is the start of the input colormap, and 1 its end (the default is 0.0).
+    maxval : type
+        Where to start the wanted colormap, assuming that 0 is the start of the input colormap, and 1 its end (the default is 0.0).
+    n : type
+        Description of parameter `n` (the default is 100).
+
+    Returns
+    -------
+    type
+        Description of returned object.
+
+    """
+    # from here: https://stackoverflow.com/a/18926541/9530017
+    new_cmap = mpcolors.LinearSegmentedColormap.from_list(
+        "trunc({n},{a:.2f},{b:.2f})".format(n=cmap.name, a=minval, b=maxval),
+        cmap(np.linspace(minval, maxval, n)),
+    )
+    return new_cmap
 
 
 def north_arrow(

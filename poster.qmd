@@ -14,7 +14,9 @@ format:
 ::: {.column width="20%" .sidecolumn} 
 
 
-<h2 style="margin-top:10px; margin-bottom:20px"> {{< fa book >}} - Introduction </h2>
+<h2 style="margin-top:10px; margin-bottom:20px"> {{< fa book >}} -- Introduction </h2>
+
+::: {style="text-align:justify;text-justify: inter-character;"}
 
 Turbulent flow over complex terrain plays a key role in many environmental and geophysical systems, such as wind energy, wave formation, and dune dynamics. 
 <!--  -->
@@ -24,55 +26,126 @@ While **topography feedback on wind speed** has been largely quantified an under
 <!--  -->
 While the resolution of global atmospheric models is getting more precise, their habilility to reproduce precisely near-surface wind remain to be assessed.
 
-1. Can global atmospheric models predict near-surface winds in arid areas? 
-2. Does giant dunes signficantly affect the atmospheric flow?
+:::
 
-<h2> {{< fa gears >}} - Methods </h2>
+:::{.square-border .border-color-highlights}
 
-ERA5-land (climate reanalysis) + local wind measurements comparison in 4 different places in the Namib desert.
+<ul class="fa-ul">
+  <li><span class="fa-li"><i class="fa fa-question-circle"></i></span>Can global atmospheric models predict near-surface winds in arid areas?</li>
+  <li><span class="fa-li"><i class="fa fa-question-circle"></i></span>Do giant dunes signficantly affect the atmospheric flow?</li>
+</ul>
 
-![](poster_files/src/figures/figure_map.svg)
+:::
+
+
+<h2> {{< fa gears >}} -- Methods </h2>
+
+4 different places in the Namib desert:
+
+::: {style='margin-top:-1em; margin-bottom:0em'}
+- regional winds: ERA5-Land (climate reanalysis)
+- local winds: in situ measurements 
+:::
+
+![](poster_files/src/figures/figure_map.svg){fig-align="center" width=97%}
 
 
 :::
 
-::: {.column width="60%" .maincolumn}
+::: {.column width="60%" .maincolumn .bg-color2}
 
-::: {#mainMessage}
-**Giant dunes can disturb the wind ...**
+::: {#mainMessage style='text-align:center; margin-bottom:-0.1em'}
+**Giant dunes can disturb the wind...**
+:::
+
+:::: {.columns}
+::: {.column width=49.5%}
+
+::: {.centered .small .bold .text-color-flat}
+Relatively flat
+:::
+
+![](poster_files/src/figures/figure_wind_roses_Adamax_Station.svg){fig-align="center" width=100% .surround-color-flat}
+
+::: {.centered .small .round-border .border-color-flat}
+
+Agreement between regional and local winds !
+
 :::
 
 
-:::: {style="max-width: 50%; margin: 25px auto; border-bottom: 3px solid #71767a;"}
+:::
+
+::: {.column width=49.5%}
+
+::: {.centered .small .bold .text-color-dune}
+Between giant dunes
+:::
+
+![](poster_files/src/figures/figure_wind_roses_Deep_Sea_Station.svg){fig-align="center" width=100% .surround-color-dune}
+
+::: {.centered .small .round-border .border-color-dune}
+
+Local along-dune redirection of **weak** regional winds **at night**
+
+:::
+
+:::
+
 ::::
 
-::: {#mainMessage}
-**... affecting smaller-scale bedforms in the interdune !**
+
+:::: {style="max-width: 50%; margin: 25px auto; border-bottom: 3px solid #71767a; margin-top:40px"}
+::::
+
+::: {#mainMessage style='margin-left:0.25em'}
+**...affecting smaller-scale bedforms in the interdune!**
 :::
+
+![](poster_files/src/figures/figure_crossing_dunes.svg){width=93% fig-align="right" style='margin-top:-2em'}
 
 
 ::: {#posterfooter}
-**Local wind regime induced by giant linear dunes**
+**Local Wind Regime Induced by Giant Linear Dunes: Comparison of ERA5-Land Reanalysis with Surface Measurements**
 
-Cyril Gadal, Pauline Delorme, Clément Narteau, Giles F.S. Wiggs, Matthew Baddock, Joanna M. Nield, and Philippe Claudin
+Cyril Gadal, Pauline Delorme, Clément Narteau, Giles F.S. Wiggs, Matthew Baddock, Joanna M. Nield, and Philippe Claudin <br>
+*Boundary-Layer Meteorology*, 185(3), 309-332
 :::
 
 :::
 
 ::: {.column width="20%" .sidecolumn} 
 
-::: {style='text-align:center' #logos}
+<!-- ::: {style='text-align:center' #logos}
 ![](poster_files/src/logos/EGU22-sharing-is-encouraged.png){height=65px fig-align="right" #Logoimage}
+::: -->
+
+<h2> {{< fa lightbulb >}} -- Interpretation: flow regimes  </h2>
+
+![](poster_files/src/figures/figure_flow_regimes.svg){fig-align="center" width=100%}
+
+::: {.square-border .border-color-highlights style='margin-bottom:1.5em'}
+
+Two parameters controlling flow confinement by the Atmospheric Boundary Layer (ABL):
+
+::: {style='margin-top:-1em'}
+
+  - relative ABL height: $kH$
+  - flow Froude number: $\mathcal{F} = U/\sqrt{(\delta\rho/\rho_{0}) g H}$
+  
 :::
 
-<h2> {{< fa lightbulb >}} - Results </h2>
+:::
+
+![](poster_files/src/figures/figure_regim_diagrams.svg){fig-align="center" width=100%}
 
 
+<h2> {{< fa square-check regular >}} -- Conclusion </h2>
 
-<h2> {{< fa square-check regular >}} - Conclusion </h2>
-
-
-<h2> {{< fa file-circle-question >}} - Discussion/Perspectives </h2>
+- good wind prediction from climate reanalyses if no subgrid significant topographies
+- giant dunes significantly disturb the wind in the interdune
+- this changes the morphodynamics of small scale bedforms in the interdune
+- confinement by the ABL controls the flow disturbances 
 
 
 :::

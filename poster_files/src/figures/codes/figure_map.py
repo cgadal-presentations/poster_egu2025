@@ -21,7 +21,6 @@ global_path = "/media/s88422cg/Backup_dune/DUNE/PhD_Parts/Part5_Winds/Giant_dune
 
 # paths
 path_images = os.path.join(global_path, "static/images/")
-path_savefig = os.path.join(global_path, "Paper/Figures")
 path_data = os.path.join(global_path, "static/data/processed_data")
 
 # Loading wind data
@@ -35,6 +34,7 @@ order_plot = [1, 2, 4, 6, 6]
 # fig properties
 bins = [0.03, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4]
 labels = ["Etosha West", "Huab", "North Sand Sea", "South Sand Sea"]
+colors = ["#ee9b00", "#ee9b00", "#0a9396", "#0a9396"]
 coords_stations = np.array(
     [
         (-19.034111, 15.737194),
@@ -44,8 +44,7 @@ coords_stations = np.array(
     ]
 )
 scales = [1300, 1100, 1650, 2600]
-bbox = dict(facecolor=(1, 1, 1, 0.5), edgecolor=(1, 1, 1, 0))
-bbox2 = dict(facecolor=(1, 1, 1, 0.5), edgecolor=(1, 1, 1, 0), pad=0.75)
+
 numbering = [
     r"$\quad$\textbf{a}",
     r"\textbf{b}",
@@ -60,7 +59,8 @@ fig, ax0 = plt.subplots(
     1,
     1,
     layout="constrained",
-    figsize=(0.45 * quarto.regular_fig_width, 0.75 * quarto.regular_fig_width),
+    figsize=np.array([0.45 * quarto.regular_fig_width, 0.75 * quarto.regular_fig_width])
+    * 1.2,
 )
 
 
@@ -73,13 +73,8 @@ ax0.set_ylabel(r"Latitude [$^\circ$]")
 ax0.yaxis.set_label_position("right")
 ax0.yaxis.tick_right()
 #
-ax0.scatter(
-    coords_stations[:, 1],
-    coords_stations[:, 0],
-    s=25,
-    color="k",
-)
-for point, txt in zip(coords_stations, labels):
+ax0.scatter(coords_stations[:, 1], coords_stations[:, 0], s=25, c=colors)
+for point, txt, color in zip(coords_stations, labels, colors):
     pad_x, pad_y = 0, 0
     if "Sand Sea" in txt:
         ha, va = "center", "top"
@@ -90,6 +85,7 @@ for point, txt in zip(coords_stations, labels):
     else:
         ha, va = "right", "center"
         pad_x = -0.15
+    bbox2 = dict(facecolor=(1, 1, 1, 0.5), edgecolor=color, pad=1)
     ax0.annotate(
         txt,
         (point[1] + pad_x, point[0] + pad_y),
@@ -110,7 +106,6 @@ length = 0.05
 north_arrow(
     ax0, center, length, width=0.9 * length, transform=ax0.transAxes, color="k", lw=0.05
 )
-
 
 # %% saving figure
 figname = "../{}.svg".format(sys.argv[0].split(os.sep)[-1].replace(".py", ""))
