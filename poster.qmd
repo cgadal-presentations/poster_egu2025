@@ -18,13 +18,13 @@ format:
 
 ::: {style="text-align:justify;text-justify: inter-character;"}
 
-Turbulent flow over complex terrain plays a key role in many environmental and geophysical systems, such as wind energy, wave formation, and dune dynamics. 
+Turbulent flow over complex terrain plays a key role in many environmental and geophysical systems, such as wind power, wave formation and dune dynamics.
 <!--  -->
 Compared to hills and mountains, **aeolian sand dunes**, due to their smooth and scalable shapes, **are ideal for studying wind-topography interactions**.
 <!--  -->
-While **topography feedback on wind speed** has been largely quantified an understood, much less is know **on the wind direction**, especially for **giant dunes, less studied for practical reasons**.
+While **topography feedback on wind speed** has been largely quantified an understood, much less is know **about the wind direction**, particularly for **giant dunes, less studied for practical reasons**.
 <!--  -->
-While the resolution of global atmospheric models is getting more precise, their habilility to reproduce precisely near-surface wind remain to be assessed.
+While the spatial and temporal resolution of global atmospheric models keeps improving, their habilility to reproduce precisely near-surface winds remains to be assessed.
 
 :::
 
@@ -69,7 +69,7 @@ Relatively flat
 
 ::: {.centered .small .round-border .border-color-flat}
 
-Agreement between regional and local winds !
+Agreement between regional (ERA5) and local winds !
 
 :::
 
